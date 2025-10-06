@@ -39,7 +39,7 @@ class GlobalExceptionHandler {
     fun handleTestException(e: TestException): ApiResponse<Map<String, String>> {
         return errorResponse(
             status = HttpStatus.INTERNAL_SERVER_ERROR,
-            message = "HEY THERE, I'M A TEST EXCEPTION")
+            message = "HEY THERE, I'M A TEST EXCEPTION: ${e.message}")
     }
 
     @ExceptionHandler(Exception::class)

@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.9.25"
     `maven-publish`
+    id("io.spring.dependency-management") version "1.1.7"
 }
 
 group = "com.github.marcosignacio-vr"
@@ -21,7 +22,11 @@ publishing {
     }
 
 }
-
+dependencyManagement {
+    imports {
+        mavenBom("org.springframework.boot:spring-boot-dependencies:3.5.6")
+    }
+}
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.boot:spring-boot-starter-web")
