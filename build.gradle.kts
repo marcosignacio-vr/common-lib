@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "com.github.marcosignacio-vr"
-version = "0.0.1"
+version = "0.0.2"
 
 repositories {
     mavenCentral()
@@ -20,7 +20,7 @@ publishing {
             from(components["java"]) // incluye tu código Kotlin compilado
             artifactId = "common-lib"
             groupId ="com.github.marcosignacio-vr"
-            version = "0.0.1"
+            version = "0.0.2"
         }
     }
     repositories {
